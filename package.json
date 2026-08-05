@@ -1,0 +1,30 @@
+{
+  "name": "ancona-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "i18next": "^23.10.0",
+    "lucide-react": "^0.354.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^14.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.5.4",
+    "husky": "^8.0.3",
+    "postcss": "^8.5.25",
+    "tailwindcss": "^3.4.19",
+    "vite": "^5.4.21"
+  }
+}

@@ -1,0 +1,353 @@
+{
+  "tendencias": [
+    {
+      "id": "tend-1",
+      "name": "Anillo Solitario Diamante Real",
+      "detail": "Alta Joyería · 1.2 ct",
+      "price": "$24,225 MXN",
+      "originalPrice": "$28,500 MXN",
+      "discountPercent": 15,
+      "hasDiscount": true,
+      "desc": "Anillo de compromiso clásico en oro blanco de 18k con diamante certificado corte brillante y engaste de 4 uñas.",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDMytumwDq2aWEo9fu_iK1ab24W4nH0ID7Q5MbKfpuqWPcObauA8aBYTY5BpNBIT8kkn8iysrKChgMmkb95efwTBY5RTGbc--a2ox0_SCuA-6DCN8fING1-9p1NF2fQW7fgIh37Dll7uPV0Rewijy_dIT6miYgdDbutCuuHyhUA2qN9Gkk_pCpkzkigmHbB4GAkuoc9dn6iVH8pEedCkL4E7DGS25NB4XlmsROSd3jtHXMZPsAYAiiMKOMWZVzGdlewCXo",
+      "images": [
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuDMytumwDq2aWEo9fu_iK1ab24W4nH0ID7Q5MbKfpuqWPcObauA8aBYTY5BpNBIT8kkn8iysrKChgMmkb95efwTBY5RTGbc--a2ox0_SCuA-6DCN8fING1-9p1NF2fQW7fgIh37Dll7uPV0Rewijy_dIT6miYgdDbutCuuHyhUA2qN9Gkk_pCpkzkigmHbB4GAkuoc9dn6iVH8pEedCkL4E7DGS25NB4XlmsROSd3jtHXMZPsAYAiiMKOMWZVzGdlewCXo",
+        "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80"
+      ]
+    },
+    {
+      "id": "tend-2",
+      "name": "Gargantilla Pavé Minimalista",
+      "detail": "Edición Limitada · Circonias AAAA",
+      "price": "$3,780 MXN",
+      "originalPrice": "$4,200 MXN",
+      "discountPercent": 10,
+      "hasDiscount": true,
+      "desc": "Diseño contemporáneo en acabado espejo con incrustaciones micro-pavé que atrapan la luz en cada ángulo.",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDCi3esE8OE03xr-h3o1QvZDSKrRVAKN4AoCf5ZWjLejl27L2Tgd6He_ra4SCzTM6IYilxs-UWjhcikSnb_wld6HEbsDvzqQf-c53660m-Wf_Ra9mvXSTW_jSbFmLqE2l0LHqRGy0xMaqTgkTiuVvBC359xvz-Z5PQJ-8KerSoLLHpx0IC_TOyzL7LXFiSzO78dHZgoy1QiD3HVaTevIoM-mZlA011l8aC1iPTc93G0WOsX5pDG93mHIeMDGfzupYkLA9I",
+      "images": [
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuDCi3esE8OE03xr-h3o1QvZDSKrRVAKN4AoCf5ZWjLejl27L2Tgd6He_ra4SCzTM6IYilxs-UWjhcikSnb_wld6HEbsDvzqQf-c53660m-Wf_Ra9mvXSTW_jSbFmLqE2l0LHqRGy0xMaqTgkTiuVvBC359xvz-Z5PQJ-8KerSoLLHpx0IC_TOyzL7LXFiSzO78dHZgoy1QiD3HVaTevIoM-mZlA011l8aC1iPTc93G0WOsX5pDG93mHIeMDGfzupYkLA9I",
+        "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+      ]
+    },
+    {
+      "id": "tend-3",
+      "name": "Reloj Ancona Cronógrafo Mérida",
+      "detail": "Alta Relojería · Cristal Zafiro",
+      "price": "$42,000 MXN",
+      "originalPrice": null,
+      "discountPercent": null,
+      "hasDiscount": false,
+      "desc": "Reloj automático con caja de acero quirúrgico y bisel macizo grabado. Maquinaria de máxima precisión.",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAWQbwf9_gK0MhSFsNkFZ0mwm1S_KgCn_LgxE7pvnfdktebK_Pf8YoKW7ZVTypLPO3PCXKRceE73ZIVtNvI4u4Viqd94DGaWJoZ0jx0e1BEoOKwe8fHVS2TlABUIgz_Ly92xBdNSuk5q1ExOwq-o_Ngl-YZUzHsKkRgVlbSDLBtFKkF-0rJ0tQ3XqVJKxLL7KEfPnfUb5np9MXXhBqSxPriO3dl1UBuHaWauz_ZvVOMwAx4r4qCW0tvKw",
+      "images": [
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuAWQbwf9_gK0MhSFsNkFZ0mwm1S_KgCn_LgxE7pvnfdktebK_Pf8YoKW7ZVTypLPO3PCXKRceE73ZIVtNvI4u4Viqd94DGaWJoZ0jx0e1BEoOKwe8fHVS2TlABUIgz_Ly92xBdNSuk5q1ExOwq-o_Ngl-YZUzHsKkRgVlbSDLBtFKkF-0rJ0tQ3XqVJKxLL7KEfPnfUb5np9MXXhBqSxPriO3dl1UBuHaWauz_ZvVOMwAx4r4qCW0tvKw"
+      ]
+    },
+    {
+      "id": "tend-4",
+      "name": "Semanario Italiano Texturizado",
+      "detail": "Técnica Tradicional · 7 Brazaletes",
+      "price": "$15,120 MXN",
+      "originalPrice": "$18,900 MXN",
+      "discountPercent": 20,
+      "hasDiscount": true,
+      "desc": "Juego de 7 pulseras semanario con grabado diamantado hecho a mano. Elegancia italiana clásica.",
+      "image": "https://images.unsplash.com/photo-1611591475140-0230fe41d06b?auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1611591475140-0230fe41d06b?auto=format&fit=crop&w=800&q=80"
+      ]
+    },
+    {
+      "id": "tend-5",
+      "name": "Dije Esmeralda Colombiana",
+      "detail": "Gema Natural · Halo Diamantes",
+      "price": "$34,200 MXN",
+      "originalPrice": null,
+      "discountPercent": null,
+      "hasDiscount": false,
+      "desc": "Dije con esmeralda natural colombiana de intenso verde profundo en marco de finos diamantes de corte radiante.",
+      "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+      ]
+    },
+    {
+      "id": "tend-6",
+      "name": "Aretes Perla del Sur Colgante",
+      "detail": "Perla de Cultivo 9mm",
+      "price": "$10,710 MXN",
+      "originalPrice": "$12,600 MXN",
+      "discountPercent": 15,
+      "hasDiscount": true,
+      "desc": "Aretes finos de diseño atemporal con lustre tornasolado supremo y broche de alta seguridad.",
+      "image": "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  ],
+  "catalog": {
+    "rings": [
+      {
+        "id": "r-1",
+        "subcategory": "compromiso",
+        "name": "Anillo Solitario Real",
+        "metal": "Oro Blanco 18K",
+        "price": "$21,165 MXN",
+        "originalPrice": "$24,900 MXN",
+        "discountPercent": 15,
+        "hasDiscount": true,
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAqKLHoIhXq6Rpe5-umdoZ3i4TrW5-rNZO0pHR_cYe7tAI2RP1W0OMWrhRfXI0ROWohJy9QVw-5sjiIt3qmXqOY3prxgXVHjHj6fklGysmFZhI3aOiMcxQDOUvnQN3CcrdQdCgNFuwRkn1uoRM82vK96e-yhe5aPp_M2zycO7Mpzs9x04CBOsacmv7NhsAn9rFL2dkQhEXt-5PDzqSWa2vmEjP1H8tmNTGBHQ9FPZ_YUJJeQUETImQ5tHPXaqRWHiraiGI",
+        "images": [
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuAqKLHoIhXq6Rpe5-umdoZ3i4TrW5-rNZO0pHR_cYe7tAI2RP1W0OMWrhRfXI0ROWohJy9QVw-5sjiIt3qmXqOY3prxgXVHjHj6fklGysmFZhI3aOiMcxQDOUvnQN3CcrdQdCgNFuwRkn1uoRM82vK96e-yhe5aPp_M2zycO7Mpzs9x04CBOsacmv7NhsAn9rFL2dkQhEXt-5PDzqSWa2vmEjP1H8tmNTGBHQ9FPZ_YUJJeQUETImQ5tHPXaqRWHiraiGI",
+          "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80"
+        ],
+        "desc": "Diamante corte princesa de 0.80 ct en montadura de 4 uñas."
+      },
+      {
+        "id": "r-2",
+        "subcategory": "boda",
+        "name": "Argolla Matrimonial Confort",
+        "metal": "Oro Amarillo 14K",
+        "price": "$12,500 MXN",
+        "originalPrice": null,
+        "discountPercent": null,
+        "hasDiscount": false,
+        "image": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80"
+        ],
+        "desc": "Argolla pulida anatómica de máximo confort interior."
+      },
+      {
+        "id": "r-3",
+        "subcategory": "otros",
+        "name": "Semanario Maya Tallado",
+        "metal": "Oro Amarillo 14K",
+        "price": "$14,850 MXN",
+        "originalPrice": "$16,500 MXN",
+        "discountPercent": 10,
+        "hasDiscount": true,
+        "image": "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80"
+        ],
+        "desc": "Siete bandas delgadas grabadas con técnica satinada artesanal."
+      },
+      {
+        "id": "r-4",
+        "subcategory": "compromiso",
+        "name": "Solitario Halo Diamantes",
+        "metal": "Oro Rosa 14K",
+        "price": "$21,800 MXN",
+        "originalPrice": null,
+        "discountPercent": null,
+        "hasDiscount": false,
+        "image": "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=800&q=80"
+        ],
+        "desc": "Gema central enmarcada en halo brillante de circonias premium."
+      },
+      {
+        "id": "r-5",
+        "subcategory": "boda",
+        "name": "Argolla Dúo Eslabón",
+        "metal": "Plata Ley 925",
+        "price": "$3,060 MXN",
+        "originalPrice": "$3,400 MXN",
+        "discountPercent": 10,
+        "hasDiscount": true,
+        "image": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80"
+        ],
+        "desc": "Plata rodiada con carril pulido central para matrimonio."
+      },
+      {
+        "id": "r-6",
+        "subcategory": "otros",
+        "name": "Anillo Sello Ancona",
+        "metal": "Oro Amarillo 18K",
+        "price": "$29,000 MXN",
+        "originalPrice": null,
+        "discountPercent": null,
+        "hasDiscount": false,
+        "image": "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=800&q=80"
+        ],
+        "desc": "Sello masculino o femenino listo para grabado personalizado."
+      }
+    ],
+    "earrings": [
+      {
+        "id": "e-1",
+        "name": "Arracadas Italianas Tubulares",
+        "metal": "Oro Amarillo 14K",
+        "price": "$7,565 MXN",
+        "originalPrice": "$8,900 MXN",
+        "discountPercent": 15,
+        "hasDiscount": true,
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCIoaRL_5j0qizpLztU9FNDeL_gFHcZFY40rgITCba70vpCVeqqoxzkhd4GAi8zioL5XEN7MnrmZPCZQgY2Tnz2E5lmMQPliO-iYeq-xO6NS7f43X6vafuqVKiESVnYT0gHx8X5pvs_3LQE1ydRspUb0sQ7i4DqTrsMhal7S9Yk1MRV9heGansl3fCxLFQuskJFZBPGa8xeICbCJnlhqMbw5493tcbHEKMB6uHs3CLH-O8dkAiKhXkEjA",
+        "images": [
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuCIoaRL_5j0qizpLztU9FNDeL_gFHcZFY40rgITCba70vpCVeqqoxzkhd4GAi8zioL5XEN7MnrmZPCZQgY2Tnz2E5lmMQPliO-iYeq-xO6NS7f43X6vafuqVKiESVnYT0gHx8X5pvs_3LQE1ydRspUb0sQ7i4DqTrsMhal7S9Yk1MRV9heGansl3fCxLFQuskJFZBPGa8xeICbCJnlhqMbw5493tcbHEKMB6uHs3CLH-O8dkAiKhXkEjA"
+        ],
+        "desc": "Arracadas ligeras de 25mm con broche de bisagra seguro."
+      },
+      {
+        "id": "e-2",
+        "name": "Broqueles Diamante Solitario",
+        "metal": "Oro Blanco 18K",
+        "price": "$17,500 MXN",
+        "originalPrice": null,
+        "discountPercent": null,
+        "hasDiscount": false,
+        "image": "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=80"
+        ],
+        "desc": "Broqueles clásicos con poste de rosca y diamantes auténticos."
+      },
+      {
+        "id": "e-3",
+        "name": "Aretes Colgantes Gota Cristal",
+        "metal": "Plata Ley 925",
+        "price": "$2,340 MXN",
+        "originalPrice": "$2,600 MXN",
+        "discountPercent": 10,
+        "hasDiscount": true,
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCIoaRL_5j0qizpLztU9FNDeL_gFHcZFY40rgITCba70vpCVeqqoxzkhd4GAi8zioL5XEN7MnrmZPCZQgY2Tnz2E5lmMQPliO-iYeq-xO6NS7f43X6vafuqVKiESVnYT0gHx8X5pvs_3LQE1ydRspUb0sQ7i4DqTrsMhal7S9Yk1MRV9heGansl3fCxLFQuskJFZBPGa8xeICbCJnlhqMbw5493tcbHEKMB6uHs3CLH-O8dkAiKhXkEjA",
+        "images": [
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuCIoaRL_5j0qizpLztU9FNDeL_gFHcZFY40rgITCba70vpCVeqqoxzkhd4GAi8zioL5XEN7MnrmZPCZQgY2Tnz2E5lmMQPliO-iYeq-xO6NS7f43X6vafuqVKiESVnYT0gHx8X5pvs_3LQE1ydRspUb0sQ7i4DqTrsMhal7S9Yk1MRV9heGansl3fCxLFQuskJFZBPGa8xeICbCJnlhqMbw5493tcbHEKMB6uHs3CLH-O8dkAiKhXkEjA"
+        ],
+        "desc": "Diseño con caída suave y movimiento natural."
+      }
+    ],
+    "chains": [
+      {
+        "id": "c-1",
+        "name": "Cadena Eslabón Salomón",
+        "metal": "Oro Amarillo 18K",
+        "price": "$18,190 MXN",
+        "originalPrice": "$21,400 MXN",
+        "discountPercent": 15,
+        "hasDiscount": true,
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCPA7260GrkQSFhAKDThhWDMl2GeKnTQmN0xFu90eVAAtDITPJLQalpk-UODjbUcrPgy3FloFLy9u2D51VEAihmPiLDtvaTs-epZlRfguNPsYsvvhCOFX4ydziMjPu6YwTMWSjrHXDjTfgkhqk1XhbLiwzWbT6Zhra1y9jz66ZYM3xP5Y-g5dCl_2HUN8bo9QGKnnUCjiotTKwfuian7SiUsxVWOR3jyQeBR1D_nV1bkdj7zBn68kQNdg",
+        "images": [
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuCPA7260GrkQSFhAKDThhWDMl2GeKnTQmN0xFu90eVAAtDITPJLQalpk-UODjbUcrPgy3FloFLy9u2D51VEAihmPiLDtvaTs-epZlRfguNPsYsvvhCOFX4ydziMjPu6YwTMWSjrHXDjTfgkhqk1XhbLiwzWbT6Zhra1y9jz66ZYM3xP5Y-g5dCl_2HUN8bo9QGKnnUCjiotTKwfuian7SiUsxVWOR3jyQeBR1D_nV1bkdj7zBn68kQNdg"
+        ],
+        "desc": "Tejido Salomón italiano de 50 cm en oro macizo."
+      },
+      {
+        "id": "c-2",
+        "name": "Gargantilla Diamantada",
+        "metal": "Oro Blanco 14K",
+        "price": "$15,600 MXN",
+        "originalPrice": null,
+        "discountPercent": null,
+        "hasDiscount": false,
+        "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+        ],
+        "desc": "Gargantilla ultra-brillante con reflejo prismático."
+      },
+      {
+        "id": "c-3",
+        "name": "Cadena Serpiente Fina",
+        "metal": "Plata Ley 925",
+        "price": "$2,880 MXN",
+        "originalPrice": "$3,200 MXN",
+        "discountPercent": 10,
+        "hasDiscount": true,
+        "image": "https://images.unsplash.com/photo-1611591475140-0230fe41d06b?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://images.unsplash.com/photo-1611591475140-0230fe41d06b?auto=format&fit=crop&w=800&q=80"
+        ],
+        "desc": "Tejido plano suave de alto brillo para dije o uso directo."
+      }
+    ],
+    "pulseras": [
+      {
+        "id": "p-1",
+        "name": "Pulsera Barbada Maciza",
+        "metal": "Oro Amarillo 14K",
+        "price": "$19,800 MXN",
+        "originalPrice": null,
+        "discountPercent": null,
+        "hasDiscount": false,
+        "image": "https://images.unsplash.com/photo-1611591475140-0230fe41d06b?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://images.unsplash.com/photo-1611591475140-0230fe41d06b?auto=format&fit=crop&w=800&q=80"
+        ],
+        "desc": "Eslabones corpulentos pulidos con broche de caja."
+      },
+      {
+        "id": "p-2",
+        "name": "Pulsera Tenis Zirconias",
+        "metal": "Plata Ley 925",
+        "price": "$3,825 MXN",
+        "originalPrice": "$4,500 MXN",
+        "discountPercent": 15,
+        "hasDiscount": true,
+        "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+        ],
+        "desc": "Hilera continua de circonias montadas en 4 uñas."
+      }
+    ],
+    "dijes": [
+      {
+        "id": "d-1",
+        "name": "Dije Cruz Clásica Diamantada",
+        "metal": "Oro Amarillo 14K",
+        "price": "$5,780 MXN",
+        "originalPrice": "$6,800 MXN",
+        "discountPercent": 15,
+        "hasDiscount": true,
+        "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+        ],
+        "desc": "Diseño tradicional con destellos diamantados en bordes."
+      }
+    ],
+    "churumbelas": [
+      {
+        "id": "ch-1",
+        "name": "Churumbela Eternidad Diamantes",
+        "metal": "Oro Blanco 18K",
+        "price": "$19,125 MXN",
+        "originalPrice": "$22,500 MXN",
+        "discountPercent": 15,
+        "hasDiscount": true,
+        "image": "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80"
+        ],
+        "desc": "Anillo churumbela completo con diamantes de 0.05 ct cada uno."
+      }
+    ],
+    "custom": [
+      {
+        "id": "cust-1",
+        "name": "Anillo de Compromiso a la Medida",
+        "metal": "Oro 14k / 18k a elección",
+        "price": "Desde $18,000 MXN",
+        "originalPrice": null,
+        "discountPercent": null,
+        "hasDiscount": false,
+        "isBasePrice": true,
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAqKLHoIhXq6Rpe5-umdoZ3i4TrW5-rNZO0pHR_cYe7tAI2RP1W0OMWrhRfXI0ROWohJy9QVw-5sjiIt3qmXqOY3prxgXVHjHj6fklGysmFZhI3aOiMcxQDOUvnQN3CcrdQdCgNFuwRkn1uoRM82vK96e-yhe5aPp_M2zycO7Mpzs9x04CBOsacmv7NhsAn9rFL2dkQhEXt-5PDzqSWa2vmEjP1H8tmNTGBHQ9FPZ_YUJJeQUETImQ5tHPXaqRWHiraiGI",
+        "images": [
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuAqKLHoIhXq6Rpe5-umdoZ3i4TrW5-rNZO0pHR_cYe7tAI2RP1W0OMWrhRfXI0ROWohJy9QVw-5sjiIt3qmXqOY3prxgXVHjHj6fklGysmFZhI3aOiMcxQDOUvnQN3CcrdQdCgNFuwRkn1uoRM82vK96e-yhe5aPp_M2zycO7Mpzs9x04CBOsacmv7NhsAn9rFL2dkQhEXt-5PDzqSWa2vmEjP1H8tmNTGBHQ9FPZ_YUJJeQUETImQ5tHPXaqRWHiraiGI"
+        ],
+        "desc": "Diseñamos en 3D el anillo de tus sueños a partir de tu presupuesto e idea. Incluye grabado de regalo."
+      }
+    ]
+  }
+}
