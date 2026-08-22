@@ -103,20 +103,17 @@ export default function ModalPortal({
     return ReactDOM.createPortal(
       <div className="fixed inset-0 z-50 bg-surface overflow-y-auto animate-fadeIn text-left">
         {/* Dark Luxury Toolbar matching Sidebar Header */}
-        <div className="sticky top-0 z-50 bg-primary text-white border-b border-white/10 px-6 py-4 flex items-center justify-between shadow-md">
+        <div className="sticky top-0 z-50 bg-primary text-white border-b border-white/10 pl-12 pr-6 py-4 flex items-center justify-between shadow-md">
+          <div className="w-[32px]" />
           <div className="flex items-center gap-3">
-            <span className="material-symbols-outlined text-secondary-fixed text-2xl">
-              auto_awesome
-            </span>
-            <span className="font-headline text-xl text-white tracking-widest font-bold uppercase">
+            <span className="font-headline text-3xl text-white tracking-widest leading-tight">
               {title || 'Ancona Joyería'}
             </span>
           </div>
           <button
             onClick={onClose}
-            className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors text-xs font-label-caps tracking-wider font-bold shadow-sm"
+            className="flex items-center px-3 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors text-xs font-label-caps tracking-wider font-bold shadow-sm"
           >
-            <span>{t('modal.close')}</span>
             <span className="material-symbols-outlined text-lg">close</span>
           </button>
         </div>

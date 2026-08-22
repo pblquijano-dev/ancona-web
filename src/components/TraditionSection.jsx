@@ -10,7 +10,7 @@ export default function TraditionSection() {
 
   return (
     <section id="about" className="py-section-gap px-edge-margin-mobile md:px-edge-margin-desktop max-w-container-max mx-auto overflow-hidden reveal-on-scroll">
-      <div className="grid md:grid-cols-2 gap-20 items-center">
+      <div className="grid md:grid-cols-2 gap-20">
         {/* Left Image */}
         <div className="relative">
           <img

@@ -1,10 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useProductModal } from '../context/ProductContext';
 
 export default function FavoritesCarousel() {
   const { t } = useTranslation();
+  const { openProduct } = useProductModal();
   const carouselRef = useRef(null);
-  const [selectedProduct, setSelectedProduct] = useState(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
@@ -26,16 +27,6 @@ export default function FavoritesCarousel() {
       return () => ref.removeEventListener('scroll', updateScrollButtons);
     }
   }, [items]);
-
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') {
-        setSelectedProduct(null);
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
 
   const scroll = (direction) => {
     if (carouselRef.current) {
@@ -96,7 +87,7 @@ export default function FavoritesCarousel() {
         {items.map((item, index) => (
           <div
             key={item.id || index}
-            onClick={() => setSelectedProduct(item)}
+            onClick={() => openProduct(item)}
             className="group cursor-pointer min-w-[280px] sm:min-w-[320px] md:min-w-[350px] snap-start flex flex-col bg-white border border-outline-variant/20 hover:border-secondary/40 shadow-sm hover:shadow-xl transition-all duration-500 rounded-sm overflow-hidden"
           >
             {/* Image Container with Badges */}
@@ -143,68 +134,6 @@ export default function FavoritesCarousel() {
           </div>
         ))}
       </div>
-
-      {/* Quick View Product Modal */}
-      {selectedProduct && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm animate-fadeIn"
-          onClick={() => setSelectedProduct(null)}
-        >
-          <div
-            className="bg-white max-w-3xl w-full rounded-sm overflow-hidden shadow-2xl relative grid md:grid-cols-2 animate-scaleUp"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Close Button */}
-            <button
-              onClick={() => setSelectedProduct(null)}
-              className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-black text-white rounded-full flex items-center justify-center transition-colors"
-              aria-label="Close modal"
-            >
-              <span className="material-symbols-outlined text-xl">close</span>
-            </button>
-
-            {/* Modal Image */}
-            <div className="aspect-square bg-surface-container-low overflow-hidden relative">
-              <img
-                src={selectedProduct.image}
-                alt={selectedProduct.name}
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Modal Content */}
-            <div className="p-8 flex flex-col justify-between text-left">
-              <div>
-                <span className="text-xs text-secondary font-label-caps tracking-widest block mb-2 font-bold">
-                  {selectedProduct.detail}
-                </span>
-                <h3 className="font-headline text-2xl md:text-3xl text-primary mb-3">
-                  {selectedProduct.name}
-                </h3>
-                <p className="text-2xl font-headline text-secondary mb-6 font-semibold">
-                  {selectedProduct.price}
-                </p>
-                <p className="font-body text-on-surface-variant text-sm leading-relaxed font-light mb-6 border-t border-b border-outline-variant/20 py-4">
-                  {selectedProduct.desc}
-                </p>
-              </div>
-
-              {/* Action Button */}
-              <a
-                href={`https://wa.me/5219990000000?text=${encodeURIComponent(
-                  t('favorites.waConsultPrompt', { name: selectedProduct.name, price: selectedProduct.price })
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-primary hover:bg-secondary-container text-white hover:text-on-secondary-container py-4 px-6 text-center font-label-caps text-xs tracking-[0.2em] transition-all duration-300 shadow-md flex items-center justify-center gap-2"
-              >
-                <span className="material-symbols-outlined text-lg">chat</span>
-                <span>{t('favorites.consultWa')}</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

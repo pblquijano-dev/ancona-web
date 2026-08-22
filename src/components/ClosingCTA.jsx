@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { scrollToSection } from '../utils/scroll';
 
 export default function ClosingCTA() {
   const { t } = useTranslation();
@@ -22,12 +23,12 @@ export default function ClosingCTA() {
           >
             {t('closingCta.primaryBtn')}
           </a>
-          <a
-            href="#location"
-            className="border-2 border-primary text-primary px-12 py-5 font-label-caps tracking-widest hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center min-h-[72px]"
+          <button
+            onClick={() => scrollToSection('location')}
+            className="border-2 border-primary text-primary px-12 py-5 font-label-caps tracking-widest hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center min-h-[72px] cursor-pointer"
           >
             {t('closingCta.secondaryBtn')}
-          </a>
+          </button>
         </div>
       </div>
     </section>

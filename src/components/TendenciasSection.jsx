@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useCart } from '../context/CartContext';
-import ProductDetailModal from './modals/ProductDetailModal';
+import { useProductModal } from '../context/ProductContext';
 
 export default function TendenciasSection({ items = [] }) {
   const { t } = useTranslation();
   const { addToCart } = useCart();
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const { openProduct } = useProductModal();
   const [isExpanded, setIsExpanded] = useState(false);
 
   const visibleItems = isExpanded ? items : items.slice(0, 3);
@@ -37,16 +37,14 @@ export default function TendenciasSection({ items = [] }) {
           return (
             <div
               key={item.id || idx}
-              className={`bg-white border border-outline-variant/20 rounded-sm overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group text-left flex flex-col animate-fadeIn ${
-                isFeatured ? 'md:col-span-2' : ''
-              }`}
+              className={`bg-white border border-outline-variant/20 rounded-sm overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group text-left flex flex-col animate-fadeIn ${isFeatured ? 'sm:col-span-1 lg:col-span-2' : ''
+                }`}
             >
               {/* Product Image & Badges */}
               <div
-                className={`overflow-hidden relative bg-surface-container-low cursor-pointer ${
-                  isFeatured ? 'aspect-[16/9]' : 'aspect-square'
-                }`}
-                onClick={() => setSelectedProduct(item)}
+                className={`overflow-hidden relative bg-surface-container-low cursor-pointer ${isFeatured ? 'aspect-[16/9]' : 'aspect-square'
+                  }`}
+                onClick={() => openProduct(item)}
               >
                 <img
                   src={item.image}
@@ -84,7 +82,7 @@ export default function TendenciasSection({ items = [] }) {
               <div className="p-6 flex flex-col justify-between flex-grow">
                 <div>
                   <h3
-                    onClick={() => setSelectedProduct(item)}
+                    onClick={() => openProduct(item)}
                     className="font-headline text-xl text-primary mb-2 cursor-pointer group-hover:text-secondary transition-colors"
                   >
                     {item.name}
@@ -124,15 +122,6 @@ export default function TendenciasSection({ items = [] }) {
             </span>
           </button>
         </div>
-      )}
-
-      {/* Reusable ProductDetailModal */}
-      {selectedProduct && (
-        <ProductDetailModal
-          product={selectedProduct}
-          isOpen={Boolean(selectedProduct)}
-          onClose={() => setSelectedProduct(null)}
-        />
       )}
     </section>
   );

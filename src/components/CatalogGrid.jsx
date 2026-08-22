@@ -1,26 +1,31 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useCart } from '../context/CartContext';
+import { useProductModal } from '../context/ProductContext';
 import ModalPortal from './modals/ModalPortal';
-import ProductDetailModal from './modals/ProductDetailModal';
 import ProductSearchFilter from './ProductSearchFilter';
+import SlavesImage from '../assets/images/photos/slaves.jpg';
+import RingsImage from '../assets/images/photos/rings.jpg';
+import NecklacesImage from '../assets/images/photos/necklaces.jpg';
+import EarringsImage from '../assets/images/photos/earrings.jpg';
+import CharmsImage from '../assets/images/photos/charm-bracelet.jpg';
+import CustomImage from '../assets/images/photos/custom-jewelry.jpg';
 
 const CATEGORY_IMAGES = {
-  rings: "https://lh3.googleusercontent.com/aida-public/AB6AXuAqKLHoIhXq6Rpe5-umdoZ3i4TrW5-rNZO0pHR_cYe7tAI2RP1W0OMWrhRfXI0ROWohJy9QVw-5sjiIt3qmXqOY3prxgXVHjHj6fklGysmFZhI3aOiMcxQDOUvnQN3CcrdQdCgNFuwRkn1uoRM82vK96e-yhe5aPp_M2zycO7Mpzs9x04CBOsacmv7NhsAn9rFL2dkQhEXt-5PDzqSWa2vmEjP1H8tmNTGBHQ9FPZ_YUJJeQUETImQ5tHPXaqRWHiraiGI",
-  earrings: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIoaRL_5j0qizpLztU9FNDeL_gFHcZFY40rgITCba70vpCVeqqoxzkhd4GAi8zioL5XEN7MnrmZPCZQgY2Tnz2E5lmMQPliO-iYeq-xO6NS7f43X6vafuqVKiESVnYT0gHx8X5pvs_3LQE1ydRspUb0sQ7i4DqTrsMhal7S9Yk1MRV9heGansl3fCxLFQuskJFZBPGa8xeICbCJnlhqMbw5493tcbHEKMB6uHs3CLH-O8dkAiKhXkEjA",
-  chains: "https://lh3.googleusercontent.com/aida-public/AB6AXuCPA7260GrkQSFhAKDThhWDMl2GeKnTQmN0xFu90eVAAtDITPJLQalpk-UODjbUcrPgy3FloFLy9u2D51VEAihmPiLDtvaTs-epZlRfguNPsYsvvhCOFX4ydziMjPu6YwTMWSjrHXDjTfgkhqk1XhbLiwzWbT6Zhra1y9jz66ZYM3xP5Y-g5dCl_2HUN8bo9QGKnnUCjiotTKwfuian7SiUsxVWOR3jyQeBR1D_nV1bkdj7zBn68kQNdg",
-  pulseras: "https://images.unsplash.com/photo-1611591475140-0230fe41d06b?auto=format&fit=crop&w=800&q=80",
-  dijes: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
-  churumbelas: "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80",
-  custom: "https://lh3.googleusercontent.com/aida-public/AB6AXuAqKLHoIhXq6Rpe5-umdoZ3i4TrW5-rNZO0pHR_cYe7tAI2RP1W0OMWrhRfXI0ROWohJy9QVw-5sjiIt3qmXqOY3prxgXVHjHj6fklGysmFZhI3aOiMcxQDOUvnQN3CcrdQdCgNFuwRkn1uoRM82vK96e-yhe5aPp_M2zycO7Mpzs9x04CBOsacmv7NhsAn9rFL2dkQhEXt-5PDzqSWa2vmEjP1H8tmNTGBHQ9FPZ_YUJJeQUETImQ5tHPXaqRWHiraiGI"
+  rings: RingsImage,
+  earrings: EarringsImage,
+  chains: NecklacesImage,
+  pulseras: SlavesImage,
+  dijes: CharmsImage,
+  custom: CustomImage
 };
 
 export default function CatalogGrid({ catalogData = {} }) {
   const { t } = useTranslation();
   const { addToCart } = useCart();
+  const { openProduct } = useProductModal();
   const [activeCategoryModal, setActiveCategoryModal] = useState(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState('all');
-  const [selectedProduct, setSelectedProduct] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
 
   const categories = [
@@ -29,7 +34,6 @@ export default function CatalogGrid({ catalogData = {} }) {
     { key: 'chains', label: t('catalog.categories.chains'), image: CATEGORY_IMAGES.chains },
     { key: 'pulseras', label: t('catalog.categories.pulseras'), image: CATEGORY_IMAGES.pulseras },
     { key: 'dijes', label: t('catalog.categories.dijes'), image: CATEGORY_IMAGES.dijes },
-    { key: 'churumbelas', label: t('catalog.categories.churumbelas'), image: CATEGORY_IMAGES.churumbelas },
     { key: 'custom', label: t('catalog.categories.custom'), image: CATEGORY_IMAGES.custom, isCustom: true }
   ];
 
@@ -74,19 +78,19 @@ export default function CatalogGrid({ catalogData = {} }) {
           </h2>
           <p className="font-body text-on-surface-variant text-sm md:text-base font-light max-w-2xl">
             {t('catalog.subtitle') ||
-              'Haz clic en cualquiera de las 7 categorías para desplegar los modelos a la venta.'}
+              'Haz clic en cualquiera de las 6 categorías para desplegar los modelos a la venta.'}
           </p>
         </div>
 
-        {/* 7 Main Category Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-gutter">
+        {/* 6 Main Category Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
           {categories.map((cat) => {
             const itemCount = getCategoryItems(cat.key).length;
             return (
               <div
                 key={cat.key}
                 onClick={() => handleOpenCategory(cat)}
-                className="relative aspect-[4/5] sm:aspect-square overflow-hidden group shadow-md rounded-sm cursor-pointer border border-outline-variant/20"
+                className="relative aspect-square overflow-hidden group shadow-md rounded-sm cursor-pointer border border-outline-variant/20 sm:last:col-span-1"
               >
                 <img
                   src={cat.image}
@@ -141,11 +145,10 @@ export default function CatalogGrid({ catalogData = {} }) {
                   <button
                     key={subKey}
                     onClick={() => setSelectedSubcategory(subKey)}
-                    className={`px-4 py-2 rounded-full text-xs font-label-caps tracking-wider transition-all ${
-                      selectedSubcategory === subKey
-                        ? 'bg-primary text-white font-semibold shadow-sm'
-                        : 'bg-surface-container hover:bg-outline-variant/30 text-on-surface-variant'
-                    }`}
+                    className={`px-4 py-2 rounded-full text-xs font-label-caps tracking-wider transition-all ${selectedSubcategory === subKey
+                      ? 'bg-primary text-white font-semibold shadow-sm'
+                      : 'bg-surface-container hover:bg-outline-variant/30 text-on-surface-variant'
+                      }`}
                   >
                     {t(`catalog.subcategories.${subKey}`)}
                   </button>
@@ -162,7 +165,7 @@ export default function CatalogGrid({ catalogData = {} }) {
             </div>
 
             {/* Modal Products Grid - Original Headline Weight */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-left">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 text-left">
               {filteredModalItems.map((product) => (
                 <div
                   key={product.id}
@@ -171,7 +174,7 @@ export default function CatalogGrid({ catalogData = {} }) {
                   {/* Image Container with Floating Price & Hover Overlay */}
                   <div
                     className="aspect-square bg-surface-container-low overflow-hidden relative cursor-pointer"
-                    onClick={() => setSelectedProduct(product)}
+                    onClick={() => openProduct(product)}
                   >
                     <img
                       src={product.image}
@@ -207,7 +210,7 @@ export default function CatalogGrid({ catalogData = {} }) {
                   <div className="p-6 flex flex-col flex-grow justify-between">
                     <div>
                       <h4
-                        onClick={() => setSelectedProduct(product)}
+                        onClick={() => openProduct(product)}
                         className="font-headline text-xl text-primary mb-2 group-hover:text-secondary transition-colors cursor-pointer"
                       >
                         {product.name}
@@ -234,15 +237,6 @@ export default function CatalogGrid({ catalogData = {} }) {
             </div>
           </div>
         </ModalPortal>
-      )}
-
-      {/* Reusable ProductDetailModal */}
-      {selectedProduct && (
-        <ProductDetailModal
-          product={selectedProduct}
-          isOpen={Boolean(selectedProduct)}
-          onClose={() => setSelectedProduct(null)}
-        />
       )}
     </section>
   );

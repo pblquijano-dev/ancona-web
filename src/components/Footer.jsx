@@ -1,11 +1,21 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { scrollToSection } from '../utils/scroll';
 
 export default function Footer() {
   const { t } = useTranslation();
 
-  const linksExplore = t('footer.linksExplore', { returnObjects: true }) || [];
-  const linksService = t('footer.linksService', { returnObjects: true }) || [];
+  const linksExplore = [
+    { label: (t('footer.linksExplore', { returnObjects: true }) || [])[0] || 'Colecciones Anillos', target: 'catalog' },
+    { label: (t('footer.linksExplore', { returnObjects: true }) || [])[1] || 'Tendencias', target: 'tendencias' },
+    { label: (t('footer.linksExplore', { returnObjects: true }) || [])[2] || 'Nuestra Historia', target: 'about' }
+  ];
+
+  const linksService = [
+    { label: (t('footer.linksService', { returnObjects: true }) || [])[0] || 'Mantenimiento', target: 'services' },
+    { label: (t('footer.linksService', { returnObjects: true }) || [])[1] || 'Diseño a Medida', target: 'services' },
+    { label: (t('footer.linksService', { returnObjects: true }) || [])[2] || 'Contacto Directo', target: 'location' }
+  ];
 
   return (
     <footer className="bg-primary text-on-primary pt-20 pb-12 px-edge-margin-mobile md:px-edge-margin-desktop mx-auto text-left">
@@ -29,11 +39,14 @@ export default function Footer() {
             {t('footer.explore')}
           </h4>
           <ul className="space-y-3 font-body text-sm">
-            {linksExplore.map((link, idx) => (
+            {linksExplore.map((item, idx) => (
               <li key={idx}>
-                <a href="#catalog" className="text-on-primary/80 hover:text-secondary-fixed transition-colors">
-                  {link}
-                </a>
+                <button
+                  onClick={() => scrollToSection(item.target)}
+                  className="text-on-primary/80 hover:text-secondary-fixed transition-colors text-left cursor-pointer"
+                >
+                  {item.label}
+                </button>
               </li>
             ))}
           </ul>
@@ -45,11 +58,14 @@ export default function Footer() {
             {t('footer.service')}
           </h4>
           <ul className="space-y-3 font-body text-sm">
-            {linksService.map((link, idx) => (
+            {linksService.map((item, idx) => (
               <li key={idx}>
-                <a href="#services" className="text-on-primary/80 hover:text-secondary-fixed transition-colors">
-                  {link}
-                </a>
+                <button
+                  onClick={() => scrollToSection(item.target)}
+                  className="text-on-primary/80 hover:text-secondary-fixed transition-colors text-left cursor-pointer"
+                >
+                  {item.label}
+                </button>
               </li>
             ))}
           </ul>

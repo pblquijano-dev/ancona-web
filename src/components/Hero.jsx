@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { scrollToSection } from '../utils/scroll';
 import logo from '../assets/images/ancona-hero.png';
 import hero from '../assets/images/hero.jpg';
 
@@ -7,7 +8,7 @@ export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <header className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16 md:py-24">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16 md:py-24">
       {/* Background Image with Dark Vignette Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -55,8 +56,8 @@ export default function Hero() {
       </div>
 
       {/* Elegant Scroll Down Indicator */}
-      <a
-        href="#favorites"
+      <button
+        onClick={() => scrollToSection('tendencias')}
         className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-75 hover:opacity-100 transition-all duration-300 cursor-pointer z-10 group"
         aria-label="Scroll down"
       >
@@ -66,8 +67,7 @@ export default function Hero() {
         <span className="material-symbols-outlined text-white text-2xl animate-bounce">
           expand_more
         </span>
-      </a>
-    </header>
+      </button>
+    </div>
   );
 }
-

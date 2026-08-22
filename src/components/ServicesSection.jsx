@@ -26,11 +26,11 @@ export default function ServicesSection() {
         </div>
 
         {/* Clean Original Service Column Layout (No Cards) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12 text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-10 lg:gap-12 text-center">
           {services.map((service, index) => {
             const waUrl = `https://wa.me/5219990000000?text=${encodeURIComponent(service.waPrompt)}`;
             return (
-              <div key={service.id || index} className="flex flex-col items-center group">
+              <div key={service.id || index} className="flex flex-col items-center group sm:last:col-span-2 md:last:col-span-1 lg:last:col-span-1">
                 {/* Circular Icon */}
                 <div className="w-20 h-20 rounded-full border-2 border-secondary-fixed/30 flex items-center justify-center mb-3">
                   <span className="material-symbols-outlined text-5xl text-secondary-fixed">

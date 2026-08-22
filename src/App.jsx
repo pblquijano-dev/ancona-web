@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { CartProvider } from './context/CartContext';
+import { ProductProvider, useProductModal } from './context/ProductContext';
+import { productsData } from './data/products';
+import { testimonialsData } from './data/testimonials';
 import CartDrawer from './components/CartDrawer';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -12,47 +15,11 @@ import ClosingCTA from './components/ClosingCTA';
 import LocationSection from './components/LocationSection';
 import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
+import ProductDetailModal from './components/modals/ProductDetailModal';
 import useScrollReveal from './hooks/useScrollReveal';
 
-function AppContent() {
-  const [loading, setLoading] = useState(true);
-  const [productsData, setProductsData] = useState({ tendencias: [], catalog: {} });
-  const [testimonialsData, setTestimonialsData] = useState([]);
-
-  useScrollReveal(loading);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const [prodRes, testRes] = await Promise.all([
-          fetch('/data/products.json'),
-          fetch('/data/testimonials.json')
-        ]);
-
-        if (prodRes.ok) {
-          const prods = await prodRes.json();
-          setProductsData(prods);
-        }
-
-        if (testRes.ok) {
-          const tests = await testRes.json();
-          setTestimonialsData(tests);
-        }
-      } catch (err) {
-        console.error('Error loading JSON resources:', err);
-      } finally {
-        setTimeout(() => {
-          setLoading(false);
-        }, 800);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return <LoadingScreen />;
-  }
+function MainLayout({ productsData, testimonialsData }) {
+  const { activeProduct, closeProduct } = useProductModal();
 
   return (
     <div className="min-h-screen bg-background text-on-background selection:bg-secondary-container selection:text-on-secondary-container">
@@ -69,7 +36,38 @@ function AppContent() {
         <LocationSection />
       </main>
       <Footer />
+
+      {activeProduct && (
+        <ProductDetailModal
+          product={activeProduct}
+          isOpen={Boolean(activeProduct)}
+          onClose={closeProduct}
+        />
+      )}
     </div>
+  );
+}
+
+function AppContent() {
+  const [loading, setLoading] = useState(true);
+
+  useScrollReveal(loading);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 600);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingScreen />;
+  }
+
+  return (
+    <ProductProvider productsData={productsData}>
+      <MainLayout productsData={productsData} testimonialsData={testimonialsData} />
+    </ProductProvider>
   );
 }
 
