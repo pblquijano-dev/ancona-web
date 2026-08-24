@@ -1,9 +1,6 @@
-import { useTranslation } from 'react-i18next';
 import logo from '../assets/images/ancona-hero.png';
 
 export default function LoadingScreen() {
-  const { t } = useTranslation();
-
   return (
     <div className="fixed inset-0 z-50 bg-primary text-white flex flex-col items-center justify-center p-6 animate-fadeIn">
       {/* Brand Logo */}
