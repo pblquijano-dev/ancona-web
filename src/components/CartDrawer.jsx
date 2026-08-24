@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useCart } from '../context/CartContext';
+import { buildWhatsAppUrl } from '../config/constants';
 import ModalPortal from './modals/ModalPortal';
 
 export default function CartDrawer() {
@@ -28,21 +29,22 @@ export default function CartDrawer() {
       text += `${index + 1}. *${item.name}* (x${item.quantity}) - ${item.price}\n`;
     });
     text += `\n*${t('cart.waTotal')}* ${formattedTotal}\n\n${t('cart.waEnding')}`;
-    return encodeURIComponent(text);
+    return text;
   };
 
-  const whatsappUrl = `https://wa.me/5219990000000?text=${generateWhatsAppMessage()}`;
+  const whatsappUrl = buildWhatsAppUrl(generateWhatsAppMessage());
 
   return (
     <ModalPortal
       isOpen={isCartOpen}
       onClose={() => setIsCartOpen(false)}
       type="side"
+      title={t('cart.title') || 'Bolsa de Compras'}
     >
       {/* Header */}
       <div className="p-6 bg-primary text-white flex items-center justify-between flex-shrink-0">
         <div className="flex items-center gap-3">
-          <span className="material-symbols-outlined text-2xl text-secondary-fixed">
+          <span className="material-symbols-outlined text-2xl text-secondary-fixed" aria-hidden="true">
             shopping_bag
           </span>
           <div>
@@ -57,10 +59,10 @@ export default function CartDrawer() {
 
         <button
           onClick={() => setIsCartOpen(false)}
-          className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
-          aria-label="Cerrar bolsa de compras"
+          className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors cursor-pointer"
+          aria-label={t('modal.close') || 'Cerrar bolsa de compras'}
         >
-          <span className="material-symbols-outlined text-xl">close</span>
+          <span className="material-symbols-outlined text-xl" aria-hidden="true">close</span>
         </button>
       </div>
 
@@ -69,7 +71,7 @@ export default function CartDrawer() {
         {cart.length === 0 ? (
           <div className="h-full flex flex-col items-center justify-center text-center py-12">
             <div className="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-4 text-outline">
-              <span className="material-symbols-outlined text-3xl">shopping_bag</span>
+              <span className="material-symbols-outlined text-3xl" aria-hidden="true">shopping_bag</span>
             </div>
             <h3 className="font-headline text-lg text-primary mb-2">
               {t('cart.emptyTitle') || 'Tu bolsa está vacía'}
@@ -80,7 +82,7 @@ export default function CartDrawer() {
             </p>
             <button
               onClick={() => setIsCartOpen(false)}
-              className="bg-primary hover:bg-primary/90 text-white text-xs font-label-caps px-6 py-3 tracking-widest transition-colors font-bold"
+              className="bg-primary hover:bg-primary/90 text-white text-xs font-label-caps px-6 py-3 tracking-widest transition-colors font-bold cursor-pointer"
             >
               {t('cart.exploreBtn') || 'EXPLORAR CATÁLOGO'}
             </button>
@@ -105,10 +107,11 @@ export default function CartDrawer() {
                     </h4>
                     <button
                       onClick={() => removeFromCart(item.id)}
-                      className="text-outline hover:text-error transition-colors p-0.5"
+                      className="text-outline hover:text-error transition-colors p-0.5 cursor-pointer"
                       title="Eliminar pieza"
+                      aria-label={`Eliminar ${item.name} de la bolsa`}
                     >
-                      <span className="material-symbols-outlined text-lg">delete</span>
+                      <span className="material-symbols-outlined text-lg" aria-hidden="true">delete</span>
                     </button>
                   </div>
                   <span className="text-[10px] text-secondary font-label-caps font-semibold">
@@ -125,17 +128,17 @@ export default function CartDrawer() {
                   <div className="flex items-center border border-outline-variant/40 bg-white rounded">
                     <button
                       onClick={() => updateQuantity(item.id, -1)}
-                      className="px-2 py-0.5 text-on-surface-variant hover:bg-surface-container transition-colors text-xs font-bold"
+                      className="px-2 py-0.5 text-on-surface-variant hover:bg-surface-container transition-colors text-xs font-bold cursor-pointer"
                       aria-label="Disminuir cantidad"
                     >
                       -
                     </button>
-                    <span className="px-2.5 py-0.5 text-xs font-bold text-primary min-w-[24px] text-center">
+                    <span className="px-2.5 py-0.5 text-xs font-bold text-primary min-w-[24px] text-center" aria-label={`Cantidad actual: ${item.quantity}`}>
                       {item.quantity}
                     </span>
                     <button
                       onClick={() => updateQuantity(item.id, 1)}
-                      className="px-2 py-0.5 text-on-surface-variant hover:bg-surface-container transition-colors text-xs font-bold"
+                      className="px-2 py-0.5 text-on-surface-variant hover:bg-surface-container transition-colors text-xs font-bold cursor-pointer"
                       aria-label="Aumentar cantidad"
                     >
                       +
@@ -166,14 +169,14 @@ export default function CartDrawer() {
             rel="noopener noreferrer"
             className="w-full bg-primary hover:bg-secondary-container text-white hover:text-on-secondary-container py-4 text-center font-label-caps text-xs tracking-[0.2em] transition-all duration-300 flex items-center justify-center gap-2 shadow-md font-bold"
           >
-            <span className="material-symbols-outlined text-lg">chat</span>
+            <span className="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
             <span>{t('cart.checkoutWa') || 'FINALIZAR PEDIDO POR WHATSAPP'}</span>
           </a>
 
           <div className="flex justify-between items-center pt-2">
             <button
               onClick={clearCart}
-              className="text-[11px] text-outline hover:text-error transition-colors underline font-label-caps"
+              className="text-[11px] text-outline hover:text-error transition-colors underline font-label-caps cursor-pointer"
             >
               {t('cart.clearBtn') || 'Vaciar bolsa'}
             </button>

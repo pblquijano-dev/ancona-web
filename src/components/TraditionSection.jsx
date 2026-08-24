@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ModalPortal from './modals/ModalPortal';
+import { buildWhatsAppUrl } from '../config/constants';
 
 export default function TraditionSection() {
   const { t } = useTranslation();
@@ -17,6 +18,7 @@ export default function TraditionSection() {
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSw9Far2ujrmxoX_iFotfLLhnnlGrENvZ7aTRkgCLHUg9e7wwI0jetGjKPZFXAChTKwYtDdwbDLjyLUK0n5-QuZD3dGLUR54bEa0ZLETGgDZS4PNEZdQGCiBWlla4KLnL9AcmHx-vt3G8J22yUxqOI8-2q7ef6DdzB9dAdwAT1v3PKDrYy3WpHTnJcVeJzAwlIS9ApUR_m8BW2Zudpxlu1vQ8XHlZPWmi3TtaaL6W780s6FlBKuw8umQHgEa3Qt4DYULA"
             alt="Ancona Joyería Mérida Storefront"
             className="w-full shadow-2xl rounded-sm object-cover"
+            loading="lazy"
           />
         </div>
 
@@ -45,7 +47,7 @@ export default function TraditionSection() {
 
           <button
             onClick={() => setIsHistoryModalOpen(true)}
-            className="inline-block mt-12 bg-primary text-on-primary px-10 py-5 font-label-caps tracking-widest hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-300 shadow-lg font-bold"
+            className="inline-block mt-12 bg-primary text-on-primary px-10 py-5 font-label-caps tracking-widest hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-300 shadow-lg font-bold cursor-pointer"
           >
             {t('tradition.cta')}
           </button>
@@ -83,6 +85,7 @@ export default function TraditionSection() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSw9Far2ujrmxoX_iFotfLLhnnlGrENvZ7aTRkgCLHUg9e7wwI0jetGjKPZFXAChTKwYtDdwbDLjyLUK0n5-QuZD3dGLUR54bEa0ZLETGgDZS4PNEZdQGCiBWlla4KLnL9AcmHx-vt3G8J22yUxqOI8-2q7ef6DdzB9dAdwAT1v3PKDrYy3WpHTnJcVeJzAwlIS9ApUR_m8BW2Zudpxlu1vQ8XHlZPWmi3TtaaL6W780s6FlBKuw8umQHgEa3Qt4DYULA"
                   alt="Ancona Boutique Mérida"
                   className="w-full h-80 object-cover shadow-xl rounded-sm"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -116,16 +119,19 @@ export default function TraditionSection() {
                   src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80"
                   alt="Craftsmanship 1"
                   className="w-full h-64 object-cover rounded-sm shadow-md"
+                  loading="lazy"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
                   alt="Craftsmanship 2"
                   className="w-full h-64 object-cover rounded-sm shadow-md"
+                  loading="lazy"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1611591475140-0230fe41d06b?auto=format&fit=crop&w=800&q=80"
                   alt="Craftsmanship 3"
                   className="w-full h-64 object-cover rounded-sm shadow-md"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -133,12 +139,12 @@ export default function TraditionSection() {
             {/* CTA Footer */}
             <div className="text-center pt-8 border-t border-outline-variant/20">
               <a
-                href="https://wa.me/5219990000000?text=Hola%20Ancona%20Joyer%C3%ADa%2C%20me%20gustar%C3%ADa%20agendar%20una%20visita%20a%20su%20boutique%20en%20M%C3%A9rida."
+                href={buildWhatsAppUrl('Hola Ancona Joyería, me gustaría agendar una visita a su boutique en Mérida.')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 font-label-caps text-xs tracking-[0.2em] hover:bg-secondary-container hover:text-on-secondary-container transition-all shadow-md font-bold"
               >
-                <span className="material-symbols-outlined text-lg">calendar_month</span>
+                <span className="material-symbols-outlined text-lg" aria-hidden="true">calendar_month</span>
                 <span>{t('tradition.scheduleVisitBtn')}</span>
               </a>
             </div>

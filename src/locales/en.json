@@ -1,0 +1,260 @@
+{
+  "nav": {
+    "brand": "ANCONA JEWELRY",
+    "catalog": "Catalog",
+    "tendencias": "Trends",
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "loading": {
+    "text": "Loading Ancona Jewelry Experience..."
+  },
+  "search": {
+    "placeholder": "Search jewelry by name or description...",
+    "clear": "Clear search"
+  },
+  "modal": {
+    "close": "CLOSE",
+    "confirm": "Confirm",
+    "cancel": "Cancel"
+  },
+  "productModal": {
+    "youSave": "You save",
+    "shareTag": "Share jewelry on social media:",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "copiedToast": "Details copied to clipboard! Ready to share on Instagram.",
+    "shareCopy": "Discover this piece from Ancona Jewelry!: {{name}} ({{price}}) - {{url}}",
+    "consultWa": "Inquire on WhatsApp",
+    "waConsultPrompt": "Hello Ancona Jewelry, I would like to inquire about the piece \"{{name}}\" ({{price}}).",
+    "basePrice": "Base Price",
+    "offBadge": "OFF"
+  },
+  "hero": {
+    "tagline": "EST. 1990",
+    "title": "Jewelry that transcends generations in Mérida",
+    "subtitle": "Your trusted jewelry store in Colonia México. Discover unique fine pieces designed to celebrate your life's milestone moments.",
+    "cta": "Speak with an advisor",
+    "discover": "Discover"
+  },
+  "cart": {
+    "title": "Shopping Bag",
+    "itemsCount": "selected items",
+    "itemSelected": "selected item",
+    "itemsSelected": "selected items",
+    "emptyTitle": "Your shopping bag is empty",
+    "emptySubtitle": "Explore our catalog and add your favorite pieces to order via WhatsApp.",
+    "exploreBtn": "EXPLORE CATALOG",
+    "subtotal": "Estimated Total",
+    "checkoutWa": "FINALIZE ORDER ON WHATSAPP",
+    "clearBtn": "Clear bag",
+    "personalizedNote": "1-on-1 personalized service in Mérida",
+    "waPrompt": "Hello Ancona Jewelry, I would like to place an order for the following items in my shopping bag:",
+    "waTotal": "Estimated total:",
+    "waEnding": "I look forward to hearing from you to proceed with confirmation and payment. Thank you very much!"
+  },
+  "tendencias": {
+    "tagline": "CURATED TRENDS & SPECIAL EDITION",
+    "title": "Ancona Trends",
+    "subtitle": "Gallery of featured pieces. Click on any photo to view description or add directly to your bag.",
+    "addToCart": "Add to bag",
+    "viewDetails": "View details",
+    "seeMore": "VIEW MORE TRENDS",
+    "seeLess": "VIEW FEWER TRENDS"
+  },
+  "catalog": {
+    "tagline": "FINE JEWELRY CATALOG",
+    "title": "Explore our Catalog",
+    "subtitle": "Click on any of our 6 categories to view the models for sale.",
+    "viewCollection": "View Collection",
+    "modalTitle": "Collection of",
+    "modalSubtitle": "Models available in our Colonia México boutique or nationwide insured delivery.",
+    "addToCartBtn": "ADD TO BAG",
+    "subCategoryLabel": "Subcategory:",
+    "itemsFound": "Items found",
+    "customBasePrice": "Customizable Base Price",
+    "modelAvailable": "model available",
+    "modelsAvailable": "models available",
+    "searchPlaceholder": "Search in {{category}} by name or description...",
+    "subcategories": {
+      "all": "All",
+      "boda": "Wedding",
+      "compromiso": "Engagement",
+      "otros": "Others"
+    },
+    "categories": {
+      "rings": "Rings",
+      "earrings": "Earrings",
+      "chains": "Chains",
+      "pulseras": "Bracelets",
+      "dijes": "Pendants",
+      "churumbelas": "Eternity Bands",
+      "custom": "Customized"
+    }
+  },
+  "tradition": {
+    "tagline": "OUR STORY",
+    "title": "The tradition of elegance in the heart of Yucatán.",
+    "p1": "At Ancona Jewelry, we understand that every piece tells a story. Since our founding in Mérida, we have dedicated ourselves to offering fine gold and silver craftsmanship.",
+    "p2": "Located in iconic Colonia México, we are your local benchmark for trust, quality, and warm family service.",
+    "quote": "\"Our passion is creating symbols that last forever.\"",
+    "author": "ANCONA FAMILY",
+    "cta": "LEARN MORE ABOUT US",
+    "historyTitle": "Ancona Jewelry History & Legacy",
+    "historyTagline": "SINCE 1990 IN MÉRIDA, YUCATÁN",
+    "historySubtitle": "Over Three Decades Crafting Moments",
+    "historyStory": "Founded by the Ancona family in the early 1990s in Colonia México, Mérida, our boutique was born with a mission to elevate fine jewelry craftsmanship.",
+    "historyParagraph2": "Each design in our workshop combines classic goldsmith techniques with 3D precision modeling, guaranteeing unique heirloom pieces.",
+    "pillarsTitle": "The Pillars of Our Jewelry House",
+    "boutiqueTitle": "Our Boutique in Colonia México",
+    "scheduleVisitBtn": "SCHEDULE BOUTIQUE VISIT",
+    "historyPoints": [
+      "Over 30 years celebrating life's most meaningful moments.",
+      "In-house workshop with certified master goldsmiths.",
+      "Ethically sourced materials: 14k & 18k Gold, 925 Silver, natural gemstones.",
+      "Local valuation & lifelong maintenance."
+    ]
+  },
+  "services": {
+    "tagline": "FINE JEWELRY PROFESSIONAL SERVICES",
+    "title": "Specialties & Services",
+    "subtitle": "Professional fine jewelry services by master jewelers in Colonia México.",
+    "btnSolicitar": "Request",
+    "btnMas": "More",
+    "modalReadMoreTitle": "Service Details",
+    "closeModal": "Close",
+    "processTag": "STEP BY STEP PROCESS",
+    "guaranteeTag": "GUARANTEE & TIMEFRAME",
+    "boutiqueNote": "Direct service at our boutique in Colonia México, Mérida.",
+    "requestBtnWa": "REQUEST SERVICE VIA WHATSAPP",
+    "specialtyTag": "SPECIALTY SERVICES",
+    "estimatedTime": "ESTIMATED TIMEFRAME",
+    "localGuarantee": "LOCAL GUARANTEE",
+    "immediateTime": "Immediate service",
+    "writtenGuarantee": "Written guarantee",
+    "list": [
+      {
+        "id": "serv-venta",
+        "icon": "shopping_cart",
+        "title": "Consultation",
+        "desc": "Exclusive curation of gold and sterling silver jewelry.",
+        "waPrompt": "Hello Ancona Jewelry, I would like personal advice for purchasing a piece of jewelry.",
+        "details": {
+          "summary": "Personalized 1-on-1 consultation to choose the ideal piece for anniversaries, weddings, or celebrations.",
+          "process": [
+            "Personal consultation in boutique or online to match your taste & budget.",
+            "Curated presentation with authenticity certification.",
+            "Complimentary size adjustment and luxury gift packaging."
+          ],
+          "timeframe": "Immediate delivery or within 48 hours for resizing.",
+          "guarantee": "Lifetime authenticity guarantee on gold and silver."
+        }
+      },
+      {
+        "id": "serv-apartados",
+        "icon": "layers",
+        "title": "Layaway",
+        "desc": "Flexible payment plans to secure your dream jewelry.",
+        "waPrompt": "Hello Ancona Jewelry, I would like to inquire about the layaway terms.",
+        "details": {
+          "summary": "Lock in the price of your piece interest-free with flexible monthly payments.",
+          "process": [
+            "Reserve any piece with a 20% down payment.",
+            "Flexible 3 to 6 month layaway schedule.",
+            "Secure vault storage until final payment."
+          ],
+          "timeframe": "30 to 180 day terms depending on the collection.",
+          "guarantee": "Strict price lock guarantee."
+        }
+      },
+      {
+        "id": "serv-reparacion",
+        "icon": "build",
+        "title": "Repair",
+        "desc": "Expert restoration of high jewelry.",
+        "waPrompt": "Hello Ancona Jewelry, I would like to request a quote for jewelry repair/restoration.",
+        "details": {
+          "summary": "Restoring broken rings, soldering chains, stone replacement, and prong tightening with precision technology.",
+          "process": [
+            "Microscopic diagnosis by our master jeweler in Colonia México.",
+            "Detailed quote before work commences.",
+            "Laser welding, polishing, and stress testing."
+          ],
+          "timeframe": "2 to 5 business days depending on complexity.",
+          "guarantee": "6-month guarantee on repair work."
+        }
+      },
+      {
+        "id": "serv-limpieza",
+        "icon": "flare",
+        "title": "Maintenance",
+        "desc": "Professional maintenance for an impeccable shine.",
+        "waPrompt": "Hello Ancona Jewelry, I would like to schedule a professional cleaning and polishing for my jewelry.",
+        "details": {
+          "summary": "Restore original shine via ultrasonic bath, mirror polishing, and rhodium plating.",
+          "process": [
+            "Ultrasonic cavitation wash to remove embedded particles.",
+            "Professional micro-scratch polishing.",
+            "Rhodium protective bath for white gold and silver."
+          ],
+          "timeframe": "Same day (1 to 3 hours express).",
+          "guarantee": "Shine guaranteed & free prong safety check."
+        }
+      },
+      {
+        "id": "serv-amedida",
+        "icon": "diamond",
+        "title": "Bespoke",
+        "desc": "Bespoke ring and jewelry design for unforgettable moments.",
+        "waPrompt": "Hello Ancona Jewelry, I would like to get a quote for a custom bespoke jewelry piece.",
+        "details": {
+          "summary": "Custom creation of engagement rings and bespoke anniversary pieces modelled in 3D.",
+          "process": [
+            "Initial sketch and hyperrealistic 3D digital render.",
+            "Selection of loose gemstones (diamonds, emeralds, sapphires).",
+            "Casting in fine metal, hand setting, and inner engraving."
+          ],
+          "timeframe": "10 to 15 business days after render approval.",
+          "guarantee": "Authenticity certificate & gemological report."
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "tagline": "ANCONA EXPERIENCES",
+    "title": "What our clients say",
+    "pause": "Pause",
+    "play": "Play",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "closingCta": {
+    "title": "Looking for something truly special?",
+    "subtitle": "Visit our boutique in Mérida for personalized advice from expert jewelers.",
+    "primaryBtn": "SCHEDULE APPOINTMENT ON WHATSAPP",
+    "secondaryBtn": "VIEW LOCATION"
+  },
+  "location": {
+    "title": "Visit Us",
+    "addressTag": "ADDRESS",
+    "addressLine1": "Calle 31 #107A x 22, Local 1, Colonia México,",
+    "addressLine2": "Mérida, Yucatán, Mexico.",
+    "hoursTag": "HOURS",
+    "weekdays": "Monday to Friday:",
+    "weekdaysTime": "10:30 - 18:30",
+    "saturday": "Saturday:",
+    "saturdayTime": "10:30 - 15:00",
+    "sunday": "Sunday:",
+    "sundayTime": "Closed",
+    "socialTag": "FOLLOW US"
+  },
+  "footer": {
+    "summary": "Master craftsmanship in fine jewelry and local trust since 1990 in the heart of Mérida.",
+    "copyright": "© 2026 ANCONA JEWELRY. YUCATÁN, MEXICO.",
+    "explore": "EXPLORE",
+    "service": "SERVICES",
+    "linksExplore": ["Ring Collections", "Trends", "Our Story"],
+    "linksService": ["Maintenance", "Custom Design", "Direct Contact"]
+  }
+}

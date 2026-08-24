@@ -56,31 +56,31 @@ export default function TestimonialsSection({ testimonialsData = [] }) {
           <div className="flex items-center gap-2">
             <button
               onClick={handlePrev}
-              className="w-9 h-9 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition-colors flex items-center justify-center shadow-sm"
+              className="w-9 h-9 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition-colors flex items-center justify-center shadow-sm cursor-pointer"
               aria-label={t('testimonials.prev')}
               title={t('testimonials.prev')}
             >
-              <span className="material-symbols-outlined text-lg">arrow_back</span>
+              <span className="material-symbols-outlined text-lg" aria-hidden="true">arrow_back</span>
             </button>
 
             <button
               onClick={togglePlay}
-              className="w-9 h-9 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition-colors flex items-center justify-center shadow-sm"
+              className="w-9 h-9 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition-colors flex items-center justify-center shadow-sm cursor-pointer"
               aria-label={isPlaying ? t('testimonials.pause') : t('testimonials.play')}
               title={isPlaying ? t('testimonials.pause') : t('testimonials.play')}
             >
-              <span className="material-symbols-outlined text-lg">
+              <span className="material-symbols-outlined text-lg" aria-hidden="true">
                 {isPlaying ? 'pause' : 'play_arrow'}
               </span>
             </button>
 
             <button
               onClick={handleNext}
-              className="w-9 h-9 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition-colors flex items-center justify-center shadow-sm"
+              className="w-9 h-9 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition-colors flex items-center justify-center shadow-sm cursor-pointer"
               aria-label={t('testimonials.next')}
               title={t('testimonials.next')}
             >
-              <span className="material-symbols-outlined text-lg">arrow_forward</span>
+              <span className="material-symbols-outlined text-lg" aria-hidden="true">arrow_forward</span>
             </button>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function TestimonialsSection({ testimonialsData = [] }) {
               className="bg-white p-8 border border-outline-variant/20 shadow-sm hover:shadow-xl transition-all duration-500 rounded-sm relative flex flex-col justify-between text-left"
             >
               <div>
-                <span className="material-symbols-outlined text-secondary-fixed-dim text-4xl mb-4 opacity-40 block">
+                <span className="material-symbols-outlined text-secondary-fixed-dim text-4xl mb-4 opacity-40 block" aria-hidden="true">
                   format_quote
                 </span>
                 <p className="font-body italic text-sm mb-6 leading-relaxed text-primary font-light line-clamp-4">
@@ -112,7 +112,7 @@ export default function TestimonialsSection({ testimonialsData = [] }) {
                   <p className="font-label-caps text-[11px] text-primary font-bold">
                     {item.name}
                   </p>
-                  <div className="text-secondary-fixed-dim text-[10px] tracking-widest mt-0.5">
+                  <div className="text-secondary-fixed-dim text-[10px] tracking-widest mt-0.5" aria-label={`Calificación: ${item.stars}`}>
                     {item.stars}
                   </div>
                 </div>
@@ -127,7 +127,7 @@ export default function TestimonialsSection({ testimonialsData = [] }) {
             <button
               key={pageIdx}
               onClick={() => setCurrentIndex(pageIdx)}
-              className={`h-2 rounded-full transition-all duration-300 ${
+              className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                 pageIdx === currentIndex ? 'w-6 bg-primary' : 'w-2 bg-outline-variant/40 hover:bg-outline'
               }`}
               aria-label={`Ir a página de testimonios ${pageIdx + 1}`}

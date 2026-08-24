@@ -1,24 +1,24 @@
-import ringTrend from '../assets/images/photos/ring-trend.jpg';
-import ringsPhoto from '../assets/images/photos/rings.jpg';
-import necklacesPhoto from '../assets/images/photos/necklaces.jpg';
-import slavesPhoto from '../assets/images/photos/slaves.jpg';
-import chainsPhoto from '../assets/images/photos/high-angle-gold-chains-leaves.jpg';
-import braceletPhoto from '../assets/images/photos/vertical-closeup-shot-female-wearing-golden-bracelet.jpg';
+import ringTrend from '../assets/images/photos/ring-trend.webp';
+import ringsPhoto from '../assets/images/photos/rings.webp';
+import necklacesPhoto from '../assets/images/photos/necklaces.webp';
+import slavesPhoto from '../assets/images/photos/slaves.webp';
+import chainsPhoto from '../assets/images/photos/high-angle-gold-chains-leaves.webp';
+import braceletPhoto from '../assets/images/photos/vertical-closeup-shot-female-wearing-golden-bracelet.webp';
 
 // Nuevas imagenes generadas
-import emeraldPendant from '../assets/images/products/emerald-pendant.jpg';
-import pearlEarrings from '../assets/images/products/pearl-earrings.jpg';
-import weddingBand from '../assets/images/products/wedding-band.jpg';
-import haloRing from '../assets/images/products/halo-ring.jpg';
-import signetRing from '../assets/images/products/signet-ring.jpg';
-import hoopEarrings from '../assets/images/products/hoop-earrings.jpg';
-import diamondStuds from '../assets/images/products/diamond-studs.jpg';
-import crystalDropEarrings from '../assets/images/products/crystal-drop-earrings.jpg';
-import diamondChoker from '../assets/images/products/diamond-choker.jpg';
-import snakeChain from '../assets/images/products/snake-chain.jpg';
-import tennisBracelet from '../assets/images/products/tennis-bracelet.jpg';
-import crossPendant from '../assets/images/products/cross-pendant.jpg';
-import customRing from '../assets/images/products/custom-ring.jpg';
+import emeraldPendant from '../assets/images/products/emerald-pendant.webp';
+import pearlEarrings from '../assets/images/products/pearl-earrings.webp';
+import weddingBand from '../assets/images/products/wedding-band.webp';
+import haloRing from '../assets/images/products/halo-ring.webp';
+import signetRing from '../assets/images/products/signet-ring.webp';
+import hoopEarrings from '../assets/images/products/hoop-earrings.webp';
+import diamondStuds from '../assets/images/products/diamond-studs.webp';
+import crystalDropEarrings from '../assets/images/products/crystal-drop-earrings.webp';
+import diamondChoker from '../assets/images/products/diamond-choker.webp';
+import snakeChain from '../assets/images/products/snake-chain.webp';
+import tennisBracelet from '../assets/images/products/tennis-bracelet.webp';
+import crossPendant from '../assets/images/products/cross-pendant.webp';
+import customRing from '../assets/images/products/custom-ring.webp';
 
 export const productsData = {
   tendencias: [

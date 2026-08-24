@@ -72,7 +72,7 @@ export default function TendenciasSection({ items = [] }) {
                 {/* Hover Quick Action Overlay */}
                 <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
                   <span className="bg-white/95 backdrop-blur-md text-primary text-xs font-label-caps tracking-widest px-5 py-2.5 shadow-xl flex items-center gap-1.5 font-semibold">
-                    <span className="material-symbols-outlined text-base">visibility</span>
+                    <span className="material-symbols-outlined text-base" aria-hidden="true">visibility</span>
                     {t('tendencias.viewDetails')}
                   </span>
                 </div>
@@ -95,9 +95,9 @@ export default function TendenciasSection({ items = [] }) {
                 <div className="pt-4 border-t border-outline-variant/15">
                   <button
                     onClick={() => addToCart(item)}
-                    className="w-full bg-primary hover:bg-secondary-container text-white hover:text-on-secondary-container py-3 px-4 text-center font-label-caps text-[11px] tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-sm font-semibold"
+                    className="w-full bg-primary hover:bg-secondary-container text-white hover:text-on-secondary-container py-3 px-4 text-center font-label-caps text-[11px] tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-sm font-semibold cursor-pointer"
                   >
-                    <span className="material-symbols-outlined text-base">
+                    <span className="material-symbols-outlined text-base" aria-hidden="true">
                       shopping_bag
                     </span>
                     <span>{t('tendencias.addToCart') || 'Añadir a la bolsa'}</span>
@@ -114,10 +114,10 @@ export default function TendenciasSection({ items = [] }) {
         <div className="mt-12 text-center">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="inline-flex items-center gap-2 bg-surface-container border border-outline-variant/30 hover:bg-primary hover:text-white px-8 py-3.5 text-primary rounded-full text-xs font-label-caps tracking-[0.2em] transition-all duration-300 font-semibold shadow-sm"
+            className="inline-flex items-center gap-2 bg-surface-container border border-outline-variant/30 hover:bg-primary hover:text-white px-8 py-3.5 text-primary rounded-full text-xs font-label-caps tracking-[0.2em] transition-all duration-300 font-semibold shadow-sm cursor-pointer"
           >
             <span>{isExpanded ? t('tendencias.seeLess') : t('tendencias.seeMore')}</span>
-            <span className="material-symbols-outlined text-lg">
+            <span className="material-symbols-outlined text-lg" aria-hidden="true">
               {isExpanded ? 'expand_less' : 'expand_more'}
             </span>
           </button>

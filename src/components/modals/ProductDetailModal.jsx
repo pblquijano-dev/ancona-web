@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useCart } from '../../context/CartContext';
+import { buildWhatsAppUrl } from '../../config/constants';
 import ModalPortal from './ModalPortal';
 
 export default function ProductDetailModal({ product, isOpen, onClose }) {
@@ -31,8 +32,10 @@ export default function ProductDetailModal({ product, isOpen, onClose }) {
     });
   };
 
+  const consultMessage = t('productModal.waConsultPrompt', { name: product.name, price: product.price });
+
   return (
-    <ModalPortal isOpen={isOpen} onClose={onClose} type="normal">
+    <ModalPortal isOpen={isOpen} onClose={onClose} type="normal" title={product.name}>
       <div className="grid md:grid-cols-2 text-left">
         {/* Left Side: Interactive Multi-Image Gallery Carousel */}
         <div className="bg-surface-container-low flex flex-col justify-center p-6 relative">
@@ -59,19 +62,19 @@ export default function ProductDetailModal({ product, isOpen, onClose }) {
                       (prev) => (prev - 1 + images.length) % images.length
                     )
                   }
-                  className="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-black text-white flex items-center justify-center transition-colors shadow-md"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-black text-white flex items-center justify-center transition-colors shadow-md cursor-pointer"
                   aria-label="Imagen anterior"
                 >
-                  <span className="material-symbols-outlined text-lg">chevron_left</span>
+                  <span className="material-symbols-outlined text-lg" aria-hidden="true">chevron_left</span>
                 </button>
                 <button
                   onClick={() =>
                     setActiveImageIndex((prev) => (prev + 1) % images.length)
                   }
-                  className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-black text-white flex items-center justify-center transition-colors shadow-md"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-black text-white flex items-center justify-center transition-colors shadow-md cursor-pointer"
                   aria-label="Imagen siguiente"
                 >
-                  <span className="material-symbols-outlined text-lg">chevron_right</span>
+                  <span className="material-symbols-outlined text-lg" aria-hidden="true">chevron_right</span>
                 </button>
               </>
             )}
@@ -84,10 +87,11 @@ export default function ProductDetailModal({ product, isOpen, onClose }) {
                 <button
                   key={thumbIdx}
                   onClick={() => setActiveImageIndex(thumbIdx)}
-                  className={`w-14 h-14 rounded-sm overflow-hidden border-2 transition-all ${activeImageIndex === thumbIdx
+                  className={`w-14 h-14 rounded-sm overflow-hidden border-2 transition-all cursor-pointer ${activeImageIndex === thumbIdx
                     ? 'border-primary scale-105 shadow-md'
                     : 'border-transparent opacity-60 hover:opacity-100'
                     }`}
+                  aria-label={`Ver foto ${thumbIdx + 1} de ${product.name}`}
                 >
                   <img
                     src={imgUrl}
@@ -154,21 +158,19 @@ export default function ProductDetailModal({ product, isOpen, onClose }) {
                 addToCart(product);
                 onClose();
               }}
-              className="w-full bg-primary hover:bg-secondary-container text-white hover:text-on-secondary-container py-4 px-6 text-center font-label-caps text-xs tracking-[0.2em] transition-all duration-300 shadow-md flex items-center justify-center gap-2 font-semibold"
+              className="w-full bg-primary hover:bg-secondary-container text-white hover:text-on-secondary-container py-4 px-6 text-center font-label-caps text-xs tracking-[0.2em] transition-all duration-300 shadow-md flex items-center justify-center gap-2 font-semibold cursor-pointer"
             >
-              <span className="material-symbols-outlined text-lg">shopping_bag</span>
+              <span className="material-symbols-outlined text-lg" aria-hidden="true">shopping_bag</span>
               <span>{t('catalog.addToCartBtn') || 'AÑADIR A LA BOLSA'}</span>
             </button>
 
             <a
-              href={`https://wa.me/5219990000000?text=${encodeURIComponent(
-                t('productModal.waConsultPrompt', { name: product.name, price: product.price })
-              )}`}
+              href={buildWhatsAppUrl(consultMessage)}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full border border-primary text-primary hover:bg-primary hover:text-white py-3 px-6 text-center font-label-caps text-xs tracking-wider transition-all duration-300 flex items-center justify-center gap-2"
             >
-              <span className="material-symbols-outlined text-lg">chat</span>
+              <span className="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
               <span>{t('productModal.consultWa')}</span>
             </a>
 
@@ -181,17 +183,17 @@ export default function ProductDetailModal({ product, isOpen, onClose }) {
               <div className="flex items-center gap-2">
                 <button
                   onClick={handleShareFacebook}
-                  className="flex-1 bg-[#1877F2] hover:bg-[#166FE5] text-white py-2 px-3 rounded-sm text-[10px] font-label-caps tracking-wider transition-colors flex items-center justify-center gap-1.5 font-semibold"
+                  className="flex-1 bg-[#1877F2] hover:bg-[#166FE5] text-white py-2 px-3 rounded-sm text-[10px] font-label-caps tracking-wider transition-colors flex items-center justify-center gap-1.5 font-semibold cursor-pointer"
                 >
-                  <span className="material-symbols-outlined text-sm">share</span>
+                  <span className="material-symbols-outlined text-sm" aria-hidden="true">share</span>
                   <span>{t('productModal.facebook')}</span>
                 </button>
 
                 <button
                   onClick={handleShareInstagramCopy}
-                  className="flex-1 bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F56040] text-white py-2 px-3 rounded-sm text-[10px] font-label-caps tracking-wider transition-all flex items-center justify-center gap-1.5 font-semibold shadow-sm"
+                  className="flex-1 bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F56040] text-white py-2 px-3 rounded-sm text-[10px] font-label-caps tracking-wider transition-all flex items-center justify-center gap-1.5 font-semibold shadow-sm cursor-pointer"
                 >
-                  <span className="material-symbols-outlined text-sm">content_copy</span>
+                  <span className="material-symbols-outlined text-sm" aria-hidden="true">content_copy</span>
                   <span>{t('productModal.instagram')}</span>
                 </button>
               </div>

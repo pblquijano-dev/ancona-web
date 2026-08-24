@@ -4,12 +4,12 @@ import { useCart } from '../context/CartContext';
 import { useProductModal } from '../context/ProductContext';
 import ModalPortal from './modals/ModalPortal';
 import ProductSearchFilter from './ProductSearchFilter';
-import SlavesImage from '../assets/images/photos/slaves.jpg';
-import RingsImage from '../assets/images/photos/rings.jpg';
-import NecklacesImage from '../assets/images/photos/necklaces.jpg';
-import EarringsImage from '../assets/images/photos/earrings.jpg';
-import CharmsImage from '../assets/images/photos/charm-bracelet.jpg';
-import CustomImage from '../assets/images/photos/custom-jewelry.jpg';
+import SlavesImage from '../assets/images/photos/slaves.webp';
+import RingsImage from '../assets/images/photos/rings.webp';
+import NecklacesImage from '../assets/images/photos/necklaces.webp';
+import EarringsImage from '../assets/images/photos/earrings.webp';
+import CharmsImage from '../assets/images/photos/charm-bracelet.webp';
+import CustomImage from '../assets/images/photos/custom-jewelry.webp';
 
 const CATEGORY_IMAGES = {
   rings: RingsImage,
@@ -91,11 +91,16 @@ export default function CatalogGrid({ catalogData = {} }) {
                 key={cat.key}
                 onClick={() => handleOpenCategory(cat)}
                 className="relative aspect-square overflow-hidden group shadow-md rounded-sm cursor-pointer border border-outline-variant/20 sm:last:col-span-1"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleOpenCategory(cat); }}
+                aria-label={`Ver catálogo de ${cat.label}`}
               >
                 <img
                   src={cat.image}
                   alt={cat.label}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-out"
+                  loading="lazy"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 flex flex-col items-center justify-end pb-8 px-6 transition-all duration-500 group-hover:from-black/95">
@@ -109,7 +114,7 @@ export default function CatalogGrid({ catalogData = {} }) {
                       : `${itemCount} ${itemCount === 1 ? t('catalog.modelAvailable') : t('catalog.modelsAvailable')}`}
                   </span>
 
-                  <button className="bg-white/15 backdrop-blur-md border border-white/40 text-white text-[10px] px-6 py-3 font-label-caps tracking-[0.2em] uppercase group-hover:bg-white group-hover:text-primary transition-all duration-300 shadow-lg font-semibold">
+                  <button className="bg-white/15 backdrop-blur-md border border-white/40 text-white text-[10px] px-6 py-3 font-label-caps tracking-[0.2em] uppercase group-hover:bg-white group-hover:text-primary transition-all duration-300 shadow-lg font-semibold cursor-pointer">
                     {t('catalog.viewCollection')} →
                   </button>
                 </div>
@@ -145,7 +150,7 @@ export default function CatalogGrid({ catalogData = {} }) {
                   <button
                     key={subKey}
                     onClick={() => setSelectedSubcategory(subKey)}
-                    className={`px-4 py-2 rounded-full text-xs font-label-caps tracking-wider transition-all ${selectedSubcategory === subKey
+                    className={`px-4 py-2 rounded-full text-xs font-label-caps tracking-wider transition-all cursor-pointer ${selectedSubcategory === subKey
                       ? 'bg-primary text-white font-semibold shadow-sm'
                       : 'bg-surface-container hover:bg-outline-variant/30 text-on-surface-variant'
                       }`}
@@ -200,7 +205,7 @@ export default function CatalogGrid({ catalogData = {} }) {
                     {/* Floating Hover Overlay for Details */}
                     <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <span className="bg-white/95 backdrop-blur-md text-primary text-xs font-label-caps tracking-widest px-5 py-2.5 shadow-xl flex items-center gap-1.5 font-semibold">
-                        <span className="material-symbols-outlined text-base">visibility</span>
+                        <span className="material-symbols-outlined text-base" aria-hidden="true">visibility</span>
                         {t('tendencias.viewDetails')}
                       </span>
                     </div>
@@ -223,9 +228,9 @@ export default function CatalogGrid({ catalogData = {} }) {
                     <div className="pt-4 border-t border-outline-variant/15">
                       <button
                         onClick={() => addToCart(product)}
-                        className="w-full bg-primary hover:bg-secondary-container text-white hover:text-on-secondary-container py-3 px-4 text-center font-label-caps text-[11px] tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-sm font-semibold"
+                        className="w-full bg-primary hover:bg-secondary-container text-white hover:text-on-secondary-container py-3 px-4 text-center font-label-caps text-[11px] tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-sm font-semibold cursor-pointer"
                       >
-                        <span className="material-symbols-outlined text-base">
+                        <span className="material-symbols-outlined text-base" aria-hidden="true">
                           shopping_bag
                         </span>
                         <span>{t('catalog.addToCartBtn') || 'AÑADIR A LA BOLSA'}</span>

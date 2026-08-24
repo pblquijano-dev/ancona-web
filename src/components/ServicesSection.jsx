@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ModalPortal from './modals/ModalPortal';
+import { buildWhatsAppUrl } from '../config/constants';
 
 export default function ServicesSection() {
   const { t } = useTranslation();
@@ -28,12 +29,12 @@ export default function ServicesSection() {
         {/* Clean Original Service Column Layout (No Cards) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-10 lg:gap-12 text-center">
           {services.map((service, index) => {
-            const waUrl = `https://wa.me/5219990000000?text=${encodeURIComponent(service.waPrompt)}`;
+            const waUrl = buildWhatsAppUrl(service.waPrompt);
             return (
               <div key={service.id || index} className="flex flex-col items-center group sm:last:col-span-2 md:last:col-span-1 lg:last:col-span-1">
                 {/* Circular Icon */}
                 <div className="w-20 h-20 rounded-full border-2 border-secondary-fixed/30 flex items-center justify-center mb-3">
-                  <span className="material-symbols-outlined text-5xl text-secondary-fixed">
+                  <span className="material-symbols-outlined text-5xl text-secondary-fixed" aria-hidden="true">
                     {service.icon || 'star'}
                   </span>
                 </div>
@@ -55,17 +56,17 @@ export default function ServicesSection() {
                     className="text-secondary-fixed hover:text-white font-bold transition-colors inline-flex items-center gap-1"
                   >
                     <span>{t('services.btnSolicitar') || 'Solicitar'}</span>
-                    <span className="material-symbols-outlined text-sm">open_in_new</span>
+                    <span className="material-symbols-outlined text-sm" aria-hidden="true">open_in_new</span>
                   </a>
 
-                  <span className="text-white/30">|</span>
+                  <span className="text-white/30" aria-hidden="true">|</span>
 
                   <button
                     onClick={() => setSelectedService(service)}
                     className="text-white/80 hover:text-secondary-fixed transition-colors font-semibold inline-flex items-center gap-1"
                   >
                     <span>{t('services.btnMas') || 'Más'}</span>
-                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                    <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
                   </button>
                 </div>
               </div>
@@ -80,12 +81,13 @@ export default function ServicesSection() {
           isOpen={Boolean(selectedService)}
           onClose={() => setSelectedService(null)}
           type="normal"
+          title={selectedService.title}
         >
           {/* Modal Header */}
           <div className="p-6 md:p-8 bg-surface-container-low border-b border-outline-variant/20 flex items-start justify-between">
             <div className="flex items-center gap-4">
               <div className="w-14 h-14 rounded-full bg-primary text-secondary-fixed flex items-center justify-center flex-shrink-0 shadow-md">
-                <span className="material-symbols-outlined text-3xl">
+                <span className="material-symbols-outlined text-3xl" aria-hidden="true">
                   {selectedService.icon}
                 </span>
               </div>
@@ -151,12 +153,12 @@ export default function ServicesSection() {
             </span>
 
             <a
-              href={`https://wa.me/5219990000000?text=${encodeURIComponent(selectedService.waPrompt)}`}
+              href={buildWhatsAppUrl(selectedService.waPrompt)}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto bg-primary hover:bg-secondary-container text-white hover:text-on-secondary-container py-3 px-6 text-center font-label-caps text-xs tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-md font-bold"
             >
-              <span className="material-symbols-outlined text-lg">chat</span>
+              <span className="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
               <span>{t('services.requestBtnWa')}</span>
             </a>
           </div>

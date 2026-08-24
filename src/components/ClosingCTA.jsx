@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { scrollToSection } from '../utils/scroll';
+import { buildWhatsAppUrl } from '../config/constants';
 
 export default function ClosingCTA() {
   const { t } = useTranslation();
@@ -16,7 +17,7 @@ export default function ClosingCTA() {
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <a
-            href="https://wa.me/5219990000000"
+            href={buildWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-on-primary px-12 py-6 flex items-center justify-center font-label-caps tracking-widest hover:opacity-90 transition-all shadow-xl min-h-[72px]"

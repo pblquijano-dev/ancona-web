@@ -1,8 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { scrollToSection } from '../utils/scroll';
+import { buildWhatsAppUrl } from '../config/constants';
 import logo from '../assets/images/ancona-hero.png';
-import hero from '../assets/images/hero.jpg';
+import hero from '../assets/images/hero.webp';
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -43,13 +44,13 @@ export default function Hero() {
 
         {/* Glassmorphic Luxury CTA Button */}
         <a
-          href="https://wa.me/5219990000000"
+          href={buildWhatsAppUrl()}
           target="_blank"
           rel="noopener noreferrer"
           className="group inline-flex items-center gap-3 bg-white/10 hover:bg-white text-white hover:text-stone-900 border border-white/40 hover:border-white px-8 md:px-10 py-4 font-label-caps text-xs md:text-sm tracking-[0.25em] uppercase transition-all duration-500 backdrop-blur-md shadow-2xl hover:scale-[1.02] active:scale-[0.98]"
         >
           <span>{t('hero.cta')}</span>
-          <span className="material-symbols-outlined text-lg opacity-80 group-hover:translate-x-1 transition-transform duration-300">
+          <span className="material-symbols-outlined text-lg opacity-80 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true">
             arrow_forward
           </span>
         </a>
@@ -59,12 +60,12 @@ export default function Hero() {
       <button
         onClick={() => scrollToSection('tendencias')}
         className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-75 hover:opacity-100 transition-all duration-300 cursor-pointer z-10 group"
-        aria-label="Scroll down"
+        aria-label="Scroll down to featured trends"
       >
         <span className="text-[10px] tracking-[0.3em] uppercase text-white/70 group-hover:text-white transition-colors font-medium">
           {t('hero.discover') || 'Descubrir'}
         </span>
-        <span className="material-symbols-outlined text-white text-2xl animate-bounce">
+        <span className="material-symbols-outlined text-white text-2xl animate-bounce" aria-hidden="true">
           expand_more
         </span>
       </button>

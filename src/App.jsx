@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { CartProvider } from './context/CartContext';
 import { ProductProvider, useProductModal } from './context/ProductContext';
 import { productsData } from './data/products';
